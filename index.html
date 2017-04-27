@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>One more night</title> 
+  	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300" rel="stylesheet">
+  	
+  	<link rel="stylesheet" href="css/style.css"> 
+</head>
+
+<body>
+	<div id="blocker">
+		<div id="instructions">
+			<span style="font-size:40px">CLICK TO EXPLORE</span>
+			<br/>
+			(W, A, S, D = Move, MOUSE = Look around, CLICK = interact with the world)
+			<br/><br/>
+			This experiment is built for Google Chrome and won't work properly on other browsers such as Firefox and Edge.
+
+		</div>
+	</div>
+
+	<svg class = "pointer_wrapper" expanded = "true" height = "50px" width = "50px">
+		<circle cx = "50%" cy = "50%" r = "2%" stroke = "#fff" stroke-width = "6%" fill = "none">
+			<animate id="pointerGrow" attributeName="r" begin="indefinite" dur=".15s" repeatCount="1" from="2%" to="15%" fill="freeze"/>
+			<animate id="pointerShrink" attributeName="r" begin="indefinite" dur=".15s" repeatCount="1" from="15%" to="2%" fill="freeze"/>
+		</circle>
+    </svg>
+
+	<canvas id="canvas"></canvas>
+
+  	
+	<script src='js/libs/three.min.js'></script>
+	<script src='js/libs/PRNG.js'></script>
+	<script src='js/libs/SimplexNoise.js'></script>
+	<script src='js/libs/PointerLockControls.js'></script>
+	<script src='js/libs/Tween.js'></script>
+
+	<script src='js/Utils.js'></script>
+	<script src='js/EventBus.js'></script>
+	
+	<script src='js/cameraControls/PointerLockManager.js'></script>
+	
+	<script src='js/terrain/Noise.js'></script>
+	<script src='js/terrain/FalloffGenerator.js'></script>
+	<script src='js/terrain/MapGenerator.js'></script>
+	<script src="js/terrain/TerrainCollisionManager.js"></script>
+	<script src="js/terrain/TerrainMeshGenerator.js"></script>
+	<script src="js/terrain/Terrain.js"></script>
+	<script src="js/terrain/EndlessTerrain.js"></script>
+
+	<script src="js/ViewFinderManager.js"></script>
+
+	<script src="js/sounds/NotesGenerator.js"></script>
+	<script src="js/sounds/BackgroundTuneGenerator.js"></script>
+
+	<script src="js/monoliths/MonolithsSpawner.js"></script>
+	<script src="js/monoliths/Octahedrons.js"></script>
+	<script src="js/monoliths/TuneMonolith.js"></script>
+	<script src="js/monoliths/TuneMonolithGroup.js"></script>
+	<script src="js/monoliths/TimeMonolith.js"></script>
+
+	<script src="js/entities/FollowerEntity.js"></script>
+	<script src="js/entities/Trees.js"></script>
+	<script src="js/entities/Cylinders.js"></script>
+	<script src="js/entities/Grass.js"></script>
+	<script src="js/entities/Sprouts.js"></script>
+	<script src="js/entities/Mirrors.js"></script>
+	<script src="js/entities/ElusiveEntity.js"></script>
+	<script src="js/entities/EntitiesSpawner.js"></script>
+
+
+	<script src="js/sky/Stars.js"></script>
+	<script src="js/sky/Snow.js"></script>
+	<script src="js/sky/Moon.js"></script>
+	<script src="js/sky/Skydome.js"></script>
+	
+	<script src="js/SceneManager.js"></script>    
+	<script src="js/main.js"></script>
+
+</body>
+</html>
