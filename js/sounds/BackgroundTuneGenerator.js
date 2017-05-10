@@ -20,6 +20,9 @@ function BackgroundTuneGenerator(notesGenerator) {
 			interval = setInterval( function() {
 				const waveForm = Math.random() > 0.5 ? 1 : 2;
 				notesGenerator.playBackgroundNoteWithDistr(waveForm, .06, 3);
+
+				eventBus.post(notePlayed);
+				
 			}, 300);
 
 			interval2 = setInterval( function() {
