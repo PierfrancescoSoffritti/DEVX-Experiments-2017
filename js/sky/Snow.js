@@ -32,7 +32,7 @@ function Snow(scene, terrainSize) {
 	const snowEndY = -range/4;
 	snow.position.y = snowStartY;
 
-	const snowInterval = getRandom(20, 25)
+	const snowInterval = getRandom(15, 20)
 	let startSnowTime = snowInterval;
 	const snowDuration = getRandom(150, 200);
 	let isSnowing = false;
