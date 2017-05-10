@@ -1,3 +1,5 @@
+const notePlayed = "notePlayed";
+
 function BackgroundTuneGenerator(notesGenerator) {
 	
 	let fastTime = false;
@@ -6,6 +8,9 @@ function BackgroundTuneGenerator(notesGenerator) {
 	setInterval( function() {
 		const waveForm = Math.random() > 0.5 ? 1 : 2;
 		notesGenerator.playBackgroundNoteWithDistr(waveForm, .06, 3);
+
+		eventBus.post(notePlayed);
+
 	}, 1000);
 
 	eventBus.subscribe(toggleTime, () => {
